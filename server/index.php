@@ -1,4 +1,7 @@
 <?php
-require_once('./Database/Database.php');
+require_once('./Model/Movie.db.php');
 
-$database = new Database();
+$movie = new Movie;
+
+$movie->select_amount(3);
+var_dump($movie->get_results());
